@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.homepage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    >.search-section{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin: 1rem 0;
+        >button{
+            width: 200px;
+            height: 100%;
+            background-color: cadetblue;
+            color: #fff;
+            font-size: 14px;
+            padding: 0.3rem 1rem;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+
+    >.main{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      
+        >.currently-reading{
+            width: 100%;
+            height: 370px;
+            display: flex;
+            margin-bottom: 4rem;
+            flex-direction: column;
+            align-items: center;
+           
+            
+            >.book-section{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+              
+                
+            }
+        }
+        >.want-to-read{
+            width: 100%;
+            height: 370px;
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            
+            >.book-section{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                
+                
+            }
+        }
+        >.read{
+            width: 100%;
+            height: 370px;
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            
+            >.book-section{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+    }
+}
