@@ -15,7 +15,7 @@ const Search = () => {
     const handleSearch = (value) => {
         setSearch(value)
         const newProducts = products.filter((item)=> item.title === search);
-        console.log(newProducts);
+        
             products = newProducts;
         
     }
