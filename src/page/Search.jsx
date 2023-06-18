@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState } from 'react'
+import { useContext} from 'react'
 import {AiOutlineArrowLeft} from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../context/DataContext'
@@ -8,15 +8,15 @@ import Bookpage from './components/Bookpage'
 import "./search.scss";
 
 const Search = () => {
-    let { dataDispatch ,products} = useContext(DataContext)
+    const { dataDispatch ,products, search} = useContext(DataContext)
     const navigate = useNavigate();
-    let [search, setSearch] = useState("");
     
+    console.log("Array",products);
     const handleSearch = (value) => {
-        setSearch(value)
-        const newProducts = products.filter((item)=> item.title === search);
-        
-            products = newProducts;
+       dataDispatch({
+        type: 'search',
+        payload: value,
+       })
         
     }
 
@@ -29,7 +29,7 @@ const Search = () => {
         </div>
         <div className="search-book">
         {
-            products.map((book)=>(
+            products.filter((book)=> book.title.includes(search)).map((book)=>(
                 <Bookpage book={book} />
             ))
         }

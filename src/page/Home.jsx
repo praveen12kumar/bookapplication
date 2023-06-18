@@ -17,7 +17,7 @@ const Home = () => {
     setData(products);
   },[])
 
-  console.log(data);
+  
   return (
     <div className='homepage'>
         <div className="search-section">
@@ -39,7 +39,7 @@ const Home = () => {
                 <h1>Want to Read</h1>
                 <div className="book-section">
                 {
-                      data.filter((book)=> book.categoryName === "want to read").map((book)=>(
+                      data.filter((book)=> book.categoryName === "want-to-read").map((book)=>(
                         <Bookpage book={book}/>
                       ))
                 }
